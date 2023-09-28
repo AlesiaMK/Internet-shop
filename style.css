@@ -27,25 +27,25 @@ main {
     flex-grow: 1;
 }
 
-.menu {
-    display: flex;
-    width: 454px;
-    justify-content: space-between;
-    align-items: center;
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0 px;
+    position: relative;
 }
 
 a {
     text-decoration: none;
 }
 
-.nav {
+.menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
 }
 
-.logo {
+.container .logo {
     font-size: 1.68rem;
     color: #17943A;
 }
@@ -56,12 +56,6 @@ a {
 
 .menu a:hover {
     color: #17943A;
-}
-
-.container {
-    width: 1200px;
-    margin: 0 auto;
-    position: relative;
 }
 
 .site-search {
@@ -99,6 +93,16 @@ a {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 10px;
+}
+
+.shop-item {
+    width: calc(25% - 17px);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid;
 }
 
 .shop-item .content {

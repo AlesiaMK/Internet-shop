@@ -23,11 +23,11 @@ const items = [{
         rating: 5.0,
     },
     {
-        title: "Хамедорея изящная",
-        description: "Создаст небольшие тропики в вашем интерьере.",
+        title: "Ховея пастериана",
+        description: "Стильное декоративно-лиственное растение. ",
         tags: [],
         price: 92,
-        img: "./img/Hamedorea.jpeg",
+        img: "./img/Hoveya.jpeg",
         rating: 4.7,
     },
     {
@@ -157,7 +157,51 @@ function prepareShopItem(shopItem) {
 
     return item;
 
-}
+};
+
+const sortControl = document.querySelector("#sort");
+
+sortControl.addEventListener("change", (event) => {
+    const selectedOption = event.target.value;
+
+    switch (selectedOption) {
+        case "expensive":
+            {
+                currentState.sort((a, b) => b.price - a.price);
+                break;
+            }
+        case "cheap":
+            {
+                currentState.sort((a, b) => a.price - b.price);
+                break;
+            }
+        case "rating":
+            {
+                currentState.sort((a, b) => b.rating - a.rating);
+                break;
+            }
+        case "alphabet":
+            {
+                currentState.sort((a, b) => sortByAlphabet(a, b));
+                break;
+            }
+    }
+    renderItems(currentState);
+});
 
 const searchInput = document.querySelector("#search-input");
-const searchButton = document.querySelector("#search-btn")
+const searchButton = document.querySelector("#search-btn");
+
+searchButton.addEventListener("click", applySearch);
+searchInput.addEventListener("search", applySearch);
+
+function applySearch() {
+    const searchString = searchInput.value.trim().toLowerCase();
+
+    currentState = items.filter((el) =>
+        el.title.toLowerCase().includes(searchString));
+
+    currentState.sort((a, b) => sortByAlphabet(a, b));
+    sortControl.selectedIndex = 0;
+    renderItems(currentState);
+}
