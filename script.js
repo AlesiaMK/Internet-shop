@@ -133,7 +133,7 @@ function prepareShopItem(shopItem) {
 
     const item = itemTemplate.content.cloneNode(true);
 
-    item.querySelector("h1").textContent = title;
+    item.querySelector("h2").textContent = title;
     item.querySelector("p").textContent = description;
     item.querySelector("img").src = img;
     item.querySelector(".price").textContent = `${price}$`;

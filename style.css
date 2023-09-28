@@ -28,9 +28,8 @@ main {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 20px 0 px;
     position: relative;
 }
 
@@ -51,6 +50,7 @@ a {
 }
 
 .menu a {
+    font-size: 1.1rem;
     color: #3b3f3f;
 }
 
@@ -88,15 +88,53 @@ a {
     margin: 20px 0;
 }
 
+.banner {
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 218px 0 185px;
+    opacity: 1;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+}
+
+.wrapper p {
+    font-size: 2.5rem;
+    margin-top: 30px;
+}
+
+.submit {
+    display: block;
+    width: 312px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    border-radius: 30px;
+    border: 2px solid;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000;
+    border-color: #3b3f3f;
+    margin-top: 140px;
+}
+
 #shop-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .shop-item {
-    width: calc(25% - 17px);
+    width: calc(30% + 15px);
     border-radius: 4px;
     overflow: hidden;
     display: flex;
@@ -120,7 +158,7 @@ a {
     object-fit: cover;
 }
 
-.shop-item h1 {
+.shop-item h2 {
     font-size: 1rem;
     margin: 10px auto 0;
 }
