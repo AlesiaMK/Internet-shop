@@ -6,7 +6,7 @@
 
 html {
     font-size: 16px;
-    line-height: 25px;
+    line-height: 27px;
 }
 
 body {
@@ -86,18 +86,37 @@ a {
     align-items: center;
     justify-content: space-between;
     margin: 20px 0;
+    font-size: 1.1rem;
 }
 
 .banner {
-    background-image: url('img/background.jpg');
+    position: relative;
+    background-image: url('img/background1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 218px 0 185px;
     opacity: 1;
 }
 
-.wrapper {
-    margin: 0 auto;
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
 }
 
 h1 {
@@ -106,7 +125,7 @@ h1 {
     text-transform: uppercase;
 }
 
-.wrapper p {
+.slider p {
     font-size: 2.5rem;
     margin-top: 30px;
 }
@@ -121,8 +140,8 @@ h1 {
     border: 2px solid;
     font-size: 1.3rem;
     font-weight: 600;
-    color: #000;
-    border-color: #3b3f3f;
+    color: #FFF;
+    border-color: #FFF;
     margin-top: 140px;
 }
 

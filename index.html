@@ -28,31 +28,33 @@
     </header>
     <main class="container">
       <section class="banner">
-        <div class="wrapper">
+        <div class="slider">
           <h1>HOUSE PLANTS</h1>
           <p>Make your home fresh</p>
           <a href="#shop-items" class="submit">Смотреть каталог</a>
         </div>
-      </section>
-        <div class="filters">
-          <div class="filters-sort">
-            <label for="sort">Сортировка:</label>
-            <select name="sort" id="sort">
+        <button class="prev-button">&lt;</button>
+                    <button class="next-button">&gt;</button>
+                    </section>
+                    <div class="filters">
+                        <div class="filters-sort">
+                            <label for="sort">Сортировка:</label>
+                            <select name="sort" id="sort">
               <option selected value="alphabet">По алфавиту</option>
               <option value="expensive">Сначала дорогие</option>
               <option value="cheap">Сначала дешевые</option>
               <option value="rating">Рейтинг</option>
             </select>
-          </div>
-        </div>
-        <section id="shop-items">
-        </section>
-        <p id="nothing-found">Ничего не найдено</p>
-      </main>
-      <footer id="contacts" class="container">
-        <a href="#" class="logo">House plants</a>
-      </footer>
-      <template id="item-template">
+                        </div>
+                    </div>
+                    <section id="shop-items">
+                    </section>
+                    <p id="nothing-found">Ничего не найдено</p>
+                    </main>
+                    <footer id="contacts" class="container">
+                        <a href="#" class="logo">House plants</a>
+                    </footer>
+                    <template id="item-template">
         <div class="shop-item">
           <img src="">
           <div class="content">
@@ -67,7 +69,7 @@
         </div>
         </div>
       </template>
-      <script src="script.js"></script>
+                    <script src="script.js"></script>
 </body>
 
 </html>

@@ -205,3 +205,39 @@ function applySearch() {
     sortControl.selectedIndex = 0;
     renderItems(currentState);
 }
+
+const images = [
+    './img/background1.jpg',
+    './img/background2.jpg',
+    './img/background3.jpg',
+];
+
+/* Добавила слайдер */
+const slider = document.querySelector('.banner');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button')
+let currentImage = 0;
+
+/* я очень хотела добавить слайдер и посмотрела в интернете темку про атрибуты:) */
+function setBgImage(index) {
+    slider.setAttribute('style', `background-image: url('${images[index]}')`);
+}
+
+prevButton.addEventListener('click', showPreviousSlide);
+nextButton.addEventListener('click', showNextSlide);
+
+function showPreviousSlide() {
+    currentImage--;
+    currentImage = (currentImage < 0) ? images.length - 1 : currentImage;
+    setBgImage(currentImage)
+}
+
+function showNextSlide() {
+    currentImage++;
+    currentImage = (currentImage == images.length) ? 0 : currentImage;
+    setBgImage(currentImage)
+}
+
+
+
+setBgImage(currentImage)
